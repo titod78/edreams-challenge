@@ -1,4 +1,6 @@
 export default {
+  homePage: "Home page",
+  searchPage: "Search page",
   departure: "Departure",
   arrival: "Arrival",
   departureDate: "Departure date",

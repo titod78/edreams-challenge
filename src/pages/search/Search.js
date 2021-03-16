@@ -24,7 +24,7 @@ const Search = () => {
 
   return (
     <>
-      <SearchStyled>Search Page</SearchStyled>
+      <SearchStyled>{labels.searchPage}</SearchStyled>
       {itineraries &&
         (!!itineraries.length ? (
           <Itineraries itineraries={itineraries} />

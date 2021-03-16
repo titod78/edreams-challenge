@@ -1,6 +1,6 @@
 # <a id="edreams_challenge_0"></a>Simple React app for search itineraries.
 
-I created this project [using Create React App](https://create-react-app.dev/). I used React because it provides a very good way to have an SPA.
+I created this project with [Create React App](https://create-react-app.dev/). I used React because it provides a very good way to have an SPA.
 
 I have used [React Hooks](https://reactjs.org/docs/hooks-intro.html) instead of classes in order to have a more readable and scalable code.
 

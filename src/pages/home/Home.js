@@ -4,6 +4,7 @@ import { HomeStyled } from "./styles/Styled";
 import locationsService from "../../services/locationsService";
 import SearchForm from "../../components/Search/Form";
 import setSearchParams from "../../utils/setSearchParams";
+import labels from "../../labels";
 
 const Home = () => {
   const [locations, setLocations] = useState([]);
@@ -22,7 +23,7 @@ const Home = () => {
 
   return (
     <>
-      <HomeStyled>Home Page</HomeStyled>
+      <HomeStyled>{labels.homePage}</HomeStyled>
       {locations && <SearchForm locations={locations} onSubmit={onSearch} />}
     </>
   );
