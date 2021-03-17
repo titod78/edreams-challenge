@@ -1,0 +1,78 @@
+- General purpose
+
+  -- Develop a new Home and Results page for eDreams.
+	-- I implemented the exercise in React because it's the library that is being used in eDreams and it's also currently used by me. It works very well for SPA and it's easy to use.
+	-- I used React Router to route the SPA app in order to simulate a "real" eDreams search.
+	-- I think that it's not necessary to keep the app state because we don't need to share common information between pages, so I didn't use any context library like redux or useContext.
+	-- I used Styled Components to Style the components in all app components.
+	-- When a search is triggered the app navigates to the search page passing the params in the url (on the same way as eDreams site).
+		 The request to the service to get the results is made from the search page itself taking the search params from the url.
+		 It will allow us to "save in favourites" the search url or to show some kind of messages until the search finish (optimistic loading).
+	-- As the endpoint is returning all the itineraries available, when the search results are received I'm filtering the data according to the search params.
+	-- When the data are filtered the itineraries will show with the information required.
+	-- I'm sorting the data by price, but the property to sort by is configurable to be able to sort by another prop.
+	-- I've tried to follow the eDreams branch.
+	-- I've implemented "Mobile First".
+	-- I've tried to keeep the components as much generic and shareable as I can.
+
+
+PAGES:
+
+- Home page
+
+	-- It have a form component that have the fields required. Two DropDown components for both departue and arrival locations and one DatePicker component, which is a wrapper for an external dropdown component, to select the departure date.
+
+
+- Search Page
+
+	-- Shows the search results.
+	-- It have a List component that receives the itineraries. For each of them a Itineary component is being called and it's receiving the adapted props in order to don't have logic inside the components.
+
+
+COMPONENTS:
+
+- Header
+
+
+- Itineraries
+	-- Itinerary
+	
+
+- Search
+	-- DatePicker
+	-- DropDown
+	-- Form
+
+
+- Services
+
+	-- Export functions for both services locations and itineraries in order to don't make request from the components.
+
+
+- Config file
+
+	-- Here I have the urls of the service and some common data as "currency" or "date format".
+
+
+- Labels
+
+	-- App text
+
+
+- Utils
+
+	-- Some utils like "formatDate", "getQueryParams", "isEmpty"...
+
+
+- Test
+
+	-- I've configured the project to be able to unit test the components, and I've defined unit tests for one of them.
+
+
+- If I had had more time and if the application were to go to production
+
+	-- Testing on all the components (props, clicks, etc.).
+	-- Validations. For example not allowing to select the same location for both departure and arrival or don't select future dates.
+	-- Custom error messages.
+	-- Keep search data (global context, sessionStorage...).
+

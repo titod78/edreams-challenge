@@ -8,6 +8,8 @@ I have used [React Router](https://reactrouter.com/) to routing the React SPA.
 
 I have used [Styled Components](https://styled-components.com/) to style the components.
 
+I have used [Jest](https://jestjs.io/docs/25.x/tutorial-react) and [Enzime](https://enzymejs.github.io/enzyme/) for unit testing of the components.
+
 ### <a id="Tech_16"></a>Tech
 
 The technologies that I have used are:
@@ -21,6 +23,8 @@ Libraries:
 - [React]
 - [React Router]
 - [Styled Components]
+- [Jest]
+- [Enzyme]
 
 ## To run this project execute following commands in order
 
@@ -40,13 +44,12 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-Runs the app in the development mode.<br />
+Runs the app.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner.
 
 ### `yarn build`
 

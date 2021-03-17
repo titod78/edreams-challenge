@@ -25,9 +25,9 @@ export const ButtonStyled = styled.button`
   font-size: ${(props) => props.theme.font.size.medium};
   padding: 13px 24px;
   cursor: pointer;
-  margin: ${(props) => props.theme.spacing.medium};
-  width: 100%;
+  width: 90%;
   @media only screen and ${media.device.medium} {
+    margin: ${(props) => props.theme.spacing.medium};
     width: auto;
   }
 `;
