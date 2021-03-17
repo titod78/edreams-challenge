@@ -12,8 +12,10 @@ const DropDown = (props) => {
     <>
       <DropDownStyled onChange={onChange}>
         <option value="">{label}</option>
-        {items.map((item) => (
-          <option value={item}>{item}</option>
+        {items.map((item, i) => (
+          <option key={`option_${i}`} value={item}>
+            {item}
+          </option>
         ))}
       </DropDownStyled>
     </>

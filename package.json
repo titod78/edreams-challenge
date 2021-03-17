@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.13.8",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -16,10 +17,18 @@
     "react-scripts": "3.4.1",
     "styled-components": "^5.2.1"
   },
+  "devDependencies": {
+    "@babel/plugin-syntax-jsx": "^7.12.13",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0"
+  },
   "scripts": {
     "start-client": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --no-cache",
     "start": "yarn run build && (cd server && yarn start)"
   },
   "eslintConfig": {
@@ -36,5 +45,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^@src(.*)$": "<rootDir>/src$1",
+      "^@components(.*)$": "<rootDir>/src/components$1"
+    }
   }
 }
