@@ -6,9 +6,8 @@ import adaptItineraryProps from "./adapters/adaptItineraryProps";
 const Itineraries = ({ itineraries }) => {
   return (
     <ItinerariesStyled>
-      {itineraries.map(({ price, departureLocation, arrivalLocation, departureDate, arrivalDate, carrier }, i) => {
+      {itineraries.map(({ price, departureLocation, arrivalLocation, departureDate, arrivalDate, carrier }) => {
         const itineraryProps = adaptItineraryProps(
-          i,
           price,
           departureLocation,
           arrivalLocation,

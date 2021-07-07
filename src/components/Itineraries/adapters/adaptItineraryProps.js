@@ -1,15 +1,13 @@
 import config from "../../../config/config";
 
-export default function (i, price, departureLocation, arrivalLocation, departureDate, arrivalDate, carrier) {
-  const formattedPrice = `${price.toString().replace(".", ",")}${config.get("currency")}`;
+export default function (originalPrice, departureLocation, arrivalLocation, departureDate, arrivalDate, carrier) {
+  const price = `${originalPrice.toString().replace(".", ",")}${config.get("currency")}`;
+  const arrivalInfo = `${carrier} - ${departureLocation} a ${arrivalLocation} - ${departureDate}`;
+  const departureInfo = `${carrier} - ${arrivalLocation} a ${departureLocation} - ${arrivalDate}`;
 
   return {
-    i,
-    price: formattedPrice,
-    departureLocation,
-    arrivalLocation,
-    departureDate,
-    arrivalDate,
-    carrier,
+    price,
+    arrivalInfo,
+    departureInfo,
   };
 }

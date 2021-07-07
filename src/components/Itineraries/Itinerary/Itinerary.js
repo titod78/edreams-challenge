@@ -1,15 +1,11 @@
 import React from "react";
 import { ItineraryStyled, ItinearyInfoStyled, PriceStyled } from "./styles/Styled";
 
-const Itinerary = ({ price, departureLocation, arrivalLocation, departureDate, arrivalDate, carrier }) => {
+const Itinerary = ({ price, arrivalInfo, departureInfo }) => {
   return (
     <ItineraryStyled>
-      <ItinearyInfoStyled>
-        {carrier} - {departureLocation} a {arrivalLocation} - {departureDate}
-      </ItinearyInfoStyled>
-      <ItinearyInfoStyled>
-        {carrier} - {arrivalLocation} a {departureLocation} - {arrivalDate}
-      </ItinearyInfoStyled>
+      <ItinearyInfoStyled>{arrivalInfo}</ItinearyInfoStyled>
+      <ItinearyInfoStyled>{departureInfo}</ItinearyInfoStyled>
       <PriceStyled>{price}</PriceStyled>
     </ItineraryStyled>
   );
